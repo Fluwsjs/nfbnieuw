@@ -1,4 +1,4 @@
-import { Booking } from '@prisma/client';
+import type { Booking } from '../types/booking';
 import { sendReminderEmail } from './email';
 
 // Function to check if a booking needs a reminder

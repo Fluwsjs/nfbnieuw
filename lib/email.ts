@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import type { Booking } from '@prisma/client';
+import type { Booking } from '../types/booking';
 import { config } from './config';
 
 // Create SMTP transporter with retry logic
@@ -56,8 +56,8 @@ async function sendEmailWithRetry(mailOptions: nodemailer.SendMailOptions, retri
   }
 }
 
-function formatPrice(price: string): string {
-  return `€${parseFloat(price).toFixed(2)}`;
+function formatPrice(price: number | string): string {
+  return `€${Number(price).toFixed(2)}`;
 }
 
 function formatDuration(minutes: number): string {

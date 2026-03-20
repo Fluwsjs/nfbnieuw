@@ -104,7 +104,8 @@ export async function addToOutlookCalendar(booking: Booking): Promise<boolean> {
     const graphClient = await getGraphClient();
 
     // First check if the time slot is available
-    const isAvailable = await checkAvailability(booking.date.toISOString().split('T')[0], booking.time, booking.duration);
+    const bookingDate = new Date(booking.date).toISOString().split('T')[0];
+    const isAvailable = await checkAvailability(bookingDate, booking.time, booking.duration);
     if (!isAvailable) {
       // Log error to monitoring system
       console.error('Time slot is not available');

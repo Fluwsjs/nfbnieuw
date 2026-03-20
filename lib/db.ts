@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { Booking } from '../types/booking';
+import type { Booking } from '../types/booking';
 
 const prisma = new PrismaClient();
 
