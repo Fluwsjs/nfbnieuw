@@ -169,7 +169,7 @@ export function ServicesSection({ showAllDetails = false }: ServicesSectionProps
                           variant="outline" 
                           className="w-full py-6 rounded-full border-[#B99885]/30 text-[#B99885] hover:bg-[#B99885]/5 transition-all duration-300 group"
                         >
-                          <span>{service.cta}</span>
+                          <span>Meer informatie</span>
                           <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                         </Button>
                       </Link>
