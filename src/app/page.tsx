@@ -1,10 +1,10 @@
-import { HeroSection } from "@/components/sections/hero";
 import { AboutSection } from "@/components/sections/about";
 import { ServicesSection } from "@/components/sections/services";
 import { USPSection } from "@/components/sections/usp";
 import { TestimonialsSection, ContactSection } from "@/app/components/dynamic-sections";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { FAQSchema } from "@/components/seo/faq-schema";
+import homeContent from "../../content/home.json";
 
 // Simpele homepage functie om te testen of routing werkt
 // Je kunt deze functie verwijderen als alles werkt
@@ -99,27 +99,27 @@ export default function Home() {
       <FAQSchema faqItems={faqItems} />
       
       <main className="overflow-hidden">
-        {/* Hero Section - text only version */}
+        {/* Hero Section - driven by content/home.json */}
         <section className="py-24 bg-gradient-to-b from-[#FDF6F1] to-[#F9F1EA]">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-semibold mb-8 text-[#331A12]">
-              <span className="text-[#B99885]">NFB Salon</span> Aerdt
+              <span className="text-[#B99885]">{homeContent.heroTitle}</span>
             </h1>
             <p className="text-xl text-[#331A12]/80 max-w-3xl mx-auto mb-12 leading-relaxed">
-              Welkom bij NFB Salon in Aerdt - uw schoonheidssalon voor professionele gezichtsbehandelingen, nagelzorg en ontharingstechnieken in een rustgevende omgeving.
+              {homeContent.heroSubtitle}
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <a 
                 href="/afspraak" 
                 className="px-8 py-4 bg-[#B99885] text-white rounded-full hover:bg-[#a88774] transition-colors shadow-md"
               >
-                Maak een afspraak
+                {homeContent.heroCtaText}
               </a>
               <a 
                 href="/diensten" 
                 className="px-8 py-4 border border-[#B99885] text-[#B99885] rounded-full hover:bg-[#B99885]/5 transition-colors"
               >
-                Bekijk diensten
+                {homeContent.heroCtaSecondaryText}
               </a>
             </div>
           </div>

@@ -3,64 +3,15 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Clock, Shield, Heart, Award } from "lucide-react";
+import { ArrowRight, Sparkles, Heart, Award } from "lucide-react";
 import Link from "next/link";
+import servicesData from "../../../content/services.json";
 
-interface Service {
-  id: number;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  price: string;
-  features: string[];
-  cta: string;
-}
-
-const services: Service[] = [
-  {
-    id: 1,
-    name: "Gezichtsbehandelingen",
-    description: "Luxueuze en effectieve gezichtsbehandelingen die zijn afgestemd op jouw specifieke huidtype en behoeften voor een stralende, gezonde huid.",
-    icon: <Sparkles className="w-6 h-6 text-[#B99885]" />,
-    price: "vanaf €52",
-    features: [
-      "Meet & Treat (Kennismakingsbehandeling)",
-      "Pure & Clean (Reinigende behandeling)",
-      "Relax & Nourish (Voedende behandeling)",
-      "Time Reverse (Anti-aging behandeling)"
-    ],
-    cta: "Boek deze behandeling"
-  },
-  {
-    id: 2,
-    name: "Waxen, Epileren & Verven",
-    description: "Professionele ontharing en wenkbrauwverbetering voor een perfect verzorgde look met langdurig resultaat.",
-    icon: <Heart className="w-6 h-6 text-[#B99885]" />,
-    price: "vanaf €15",
-    features: [
-      "Waxen en epileren wenkbrauwen",
-      "Verven van wimpers en wenkbrauwen",
-      "Waxen bovenlip en kin",
-      "Harsen van lichaamsdelen",
-      "Lashlifting"
-    ],
-    cta: "Boek deze behandeling"
-  },
-  {
-    id: 3,
-    name: "Nagelbehandelingen",
-    description: "Professionele nagelbehandelingen die gezonde, sterke en stijlvolle nagels creëren met langdurige resultaten.",
-    icon: <Award className="w-6 h-6 text-[#B99885]" />,
-    price: "vanaf €10",
-    features: [
-      "Next Gel behandelingen",
-      "BIAB (Builder In A Bottle)",
-      "Gellak handnagels",
-      "Gellak teennagels",
-      "Allergiearme opties"
-    ],
-    cta: "Boek deze behandeling"
-  }
+// Icons are assigned by position since they can't be stored in JSON
+const serviceIcons = [
+  <Sparkles key="1" className="w-6 h-6 text-[#B99885]" />,
+  <Heart key="2" className="w-6 h-6 text-[#B99885]" />,
+  <Award key="3" className="w-6 h-6 text-[#B99885]" />,
 ];
 
 interface ServicesSectionProps {
@@ -126,8 +77,7 @@ export function ServicesSection({ showAllDetails = false }: ServicesSectionProps
               </span>
             </h2>
             <p className="text-lg text-[#331A12]/80 max-w-2xl mx-auto mt-6 leading-relaxed text-center">
-              Bij <em className="text-[#B99885] font-medium">NFB Salon</em> bieden we exclusieve schoonheidsbehandelingen met premium producten, 
-              persoonlijk afgestemd op jouw specifieke wensen en behoeften.
+              {servicesData.sectionSubtitle}
             </p>
           </motion.div>
         )}
@@ -139,7 +89,7 @@ export function ServicesSection({ showAllDetails = false }: ServicesSectionProps
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {services.map((service, index) => (
+          {servicesData.services.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -154,20 +104,10 @@ export function ServicesSection({ showAllDetails = false }: ServicesSectionProps
                   {/* Service header with icon and title */}
                   <div className="mb-6 flex items-center justify-between">
                     <h3 className="font-serif text-lg md:text-xl lg:text-2xl text-[#331A12] font-medium tracking-wide pr-2">
-                      {service.name === "Gezichtsbehandelingen" ? (
-                        <>
-                          Gezichts-<br />behandelingen
-                        </>
-                      ) : service.name === "Nagelbehandelingen" ? (
-                        <>
-                          Nagel-<br />behandelingen
-                        </>
-                      ) : (
-                        service.name
-                      )}
+                      {service.name}
                     </h3>
                     <div className="service-icon bg-[#F9F0EA] p-3 rounded-full flex-shrink-0">
-                      {service.icon}
+                      {serviceIcons[index] ?? serviceIcons[0]}
                     </div>
                   </div>
                   
@@ -224,7 +164,7 @@ export function ServicesSection({ showAllDetails = false }: ServicesSectionProps
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <Link href={`/diensten#${service.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <Link href={`/diensten#${service.name.toLowerCase().replace(/[\s,&]+/g, '-')}`}>
                         <Button 
                           variant="outline" 
                           className="w-full py-6 rounded-full border-[#B99885]/30 text-[#B99885] hover:bg-[#B99885]/5 transition-all duration-300 group"

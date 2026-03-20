@@ -1,0 +1,43 @@
+{
+  "sectionSubtitle": "Bij NFB Salon bieden we exclusieve schoonheidsbehandelingen met premium producten, persoonlijk afgestemd op jouw specifieke wensen en behoeften.",
+  "services": [
+    {
+      "id": 1,
+      "name": "Gezichtsbehandelingen",
+      "description": "Luxueuze en effectieve gezichtsbehandelingen die zijn afgestemd op jouw specifieke huidtype en behoeften voor een stralende, gezonde huid.",
+      "price": "vanaf €52",
+      "features": [
+        "Meet & Treat (Kennismakingsbehandeling)",
+        "Pure & Clean (Reinigende behandeling)",
+        "Relax & Nourish (Voedende behandeling)",
+        "Time Reverse (Anti-aging behandeling)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Waxen, Epileren & Verven",
+      "description": "Professionele ontharing en wenkbrauwverbetering voor een perfect verzorgde look met langdurig resultaat.",
+      "price": "vanaf €15",
+      "features": [
+        "Waxen en epileren wenkbrauwen",
+        "Verven van wimpers en wenkbrauwen",
+        "Waxen bovenlip en kin",
+        "Harsen van lichaamsdelen",
+        "Lashlifting"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Nagelbehandelingen",
+      "description": "Professionele nagelbehandelingen die gezonde, sterke en stijlvolle nagels creëren met langdurige resultaten.",
+      "price": "vanaf €10",
+      "features": [
+        "Next Gel behandelingen",
+        "BIAB (Builder In A Bottle)",
+        "Gellak handnagels",
+        "Gellak teennagels",
+        "Allergiearme opties"
+      ]
+    }
+  ]
+}

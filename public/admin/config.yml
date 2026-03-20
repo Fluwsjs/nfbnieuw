@@ -9,10 +9,56 @@ collections:
   - name: "pages"
     label: "Pagina's"
     files:
-      - label: "Homepage"
+
+      - label: "Homepage - Hero tekst"
         name: "home"
         file: "content/home.json"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Subtitel", name: "subtitle", widget: "text" }
-          - { label: "Hero afbeelding", name: "heroImage", widget: "image" }
+          - { label: "Hoofdtitel (bijv. NFB Salon Aerdt)", name: "heroTitle", widget: "string" }
+          - { label: "Welkomsttekst", name: "heroSubtitle", widget: "text" }
+          - { label: "Knoptekst afspraak", name: "heroCtaText", widget: "string" }
+          - { label: "Knoptekst diensten", name: "heroCtaSecondaryText", widget: "string" }
+
+      - label: "Over ons"
+        name: "about"
+        file: "content/about.json"
+        fields:
+          - { label: "Naam eigenaar", name: "ownerName", widget: "string" }
+          - { label: "Jaren ervaring (bijv. 8+)", name: "yearsExperience", widget: "string" }
+          - { label: "Ondertitel sectie", name: "sectionSubtitle", widget: "string" }
+          - { label: "Quote / missie", name: "quote", widget: "text" }
+          - { label: "Bio alinea 1", name: "bio1", widget: "text" }
+          - { label: "Bio alinea 2", name: "bio2", widget: "text" }
+
+      - label: "Diensten"
+        name: "services"
+        file: "content/services.json"
+        fields:
+          - { label: "Ondertitel sectie", name: "sectionSubtitle", widget: "text" }
+          - label: "Diensten"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Naam", name: "name", widget: "string" }
+              - { label: "Beschrijving", name: "description", widget: "text" }
+              - { label: "Prijs (bijv. vanaf €52)", name: "price", widget: "string" }
+              - label: "Behandelingen (opsomming)"
+                name: "features"
+                widget: "list"
+                field: { label: "Behandeling", name: "item", widget: "string" }
+
+      - label: "Contact & Openingstijden"
+        name: "contact"
+        file: "content/contact.json"
+        fields:
+          - { label: "Adres", name: "address", widget: "string" }
+          - { label: "Telefoonnummer", name: "phone", widget: "string" }
+          - { label: "E-mailadres", name: "email", widget: "string" }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string" }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string" }
+          - label: "Openingstijden"
+            name: "hours"
+            widget: "list"
+            fields:
+              - { label: "Dag", name: "day", widget: "string" }
+              - { label: "Tijd (bijv. 09:00 - 18:00 of Gesloten)", name: "time", widget: "string" }

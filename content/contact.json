@@ -1,0 +1,16 @@
+{
+  "address": "Loostraat 7, 6913 AG Aerdt",
+  "phone": "+31 6 12345678",
+  "email": "info@nfbsalon.nl",
+  "instagramUrl": "https://www.instagram.com/nfbsalon",
+  "facebookUrl": "https://www.facebook.com/nfbsalon",
+  "hours": [
+    { "day": "Maandag",   "time": "09:00 - 18:00" },
+    { "day": "Dinsdag",   "time": "Gesloten" },
+    { "day": "Woensdag",  "time": "Gesloten" },
+    { "day": "Donderdag", "time": "09:00 - 16:00" },
+    { "day": "Vrijdag",   "time": "09:00 - 18:00" },
+    { "day": "Zaterdag",  "time": "Gesloten" },
+    { "day": "Zondag",    "time": "Gesloten" }
+  ]
+}

@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import contactData from "../../../content/contact.json";
 
 export function ContactSection() {
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -132,7 +133,7 @@ export function ContactSection() {
                     <MapPin className="w-5 h-5 text-primary mr-3 mt-0.5" />
                     <div>
                       <p className="text-primary-foreground">Adres</p>
-                      <p className="text-muted-foreground">Loostraat 7, 6913 AG Aerdt</p>
+                      <p className="text-muted-foreground">{contactData.address}</p>
                     </div>
                   </div>
                   
@@ -140,7 +141,7 @@ export function ContactSection() {
                     <Phone className="w-5 h-5 text-primary mr-3 mt-0.5" />
                     <div>
                       <p className="text-primary-foreground">Telefoon</p>
-                      <p className="text-muted-foreground">+31 20 123 4567</p>
+                      <p className="text-muted-foreground">{contactData.phone}</p>
                     </div>
                   </div>
                   
@@ -148,7 +149,7 @@ export function ContactSection() {
                     <Mail className="w-5 h-5 text-primary mr-3 mt-0.5" />
                     <div>
                       <p className="text-primary-foreground">E-mail</p>
-                      <p className="text-muted-foreground">info@nfbsalon.nl</p>
+                      <p className="text-muted-foreground">{contactData.email}</p>
                     </div>
                   </div>
                   
@@ -156,13 +157,9 @@ export function ContactSection() {
                     <Clock className="w-5 h-5 text-primary mr-3 mt-0.5" />
                     <div>
                       <p className="text-primary-foreground">Openingstijden</p>
-                      <p className="text-muted-foreground">Maandag: 09:00 - 18:00</p>
-                      <p className="text-muted-foreground">Dinsdag: Gesloten</p>
-                      <p className="text-muted-foreground">Woensdag: Gesloten</p>
-                      <p className="text-muted-foreground">Donderdag: 09:00 - 16:00</p>
-                      <p className="text-muted-foreground">Vrijdag: 09:00 - 18:00</p>
-                      <p className="text-muted-foreground">Zaterdag: Gesloten</p>
-                      <p className="text-muted-foreground">Zondag: Gesloten</p>
+                      {contactData.hours.map((h) => (
+                        <p key={h.day} className="text-muted-foreground">{h.day}: {h.time}</p>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -173,7 +170,7 @@ export function ContactSection() {
               <h3 className="text-2xl font-serif mb-6 text-primary-foreground">Volg Ons</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com" 
+                  href={contactData.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300"
@@ -182,7 +179,7 @@ export function ContactSection() {
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://facebook.com" 
+                  href={contactData.facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300"

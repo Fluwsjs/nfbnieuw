@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ImageWithFallback } from "@/components/ui/image-with-fallback";
 import { useRef } from "react";
 import Image from "next/image";
+import aboutContent from "../../../content/about.json";
 
 export function AboutSection() {
   const containerVariants = {
@@ -75,7 +76,7 @@ export function AboutSection() {
               />
             </span>
           </h2>
-          <p className="text-lg text-[#1D1D1F]/70 mt-4">Persoonlijke aandacht en kwaliteit in een warme omgeving</p>
+          <p className="text-lg text-[#1D1D1F]/70 mt-4">{aboutContent.sectionSubtitle}</p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -102,29 +103,28 @@ export function AboutSection() {
               className="text-xl mb-8 leading-relaxed font-serif text-[#1D1D1F]"
               variants={itemVariants}
             >
-              Mijn missie is om jou een <span className="text-[#B99885] font-medium">uitzonderlijke ervaring</span> te bieden in een warme, uitnodigende omgeving, waar persoonlijke aandacht, perfectie en oog voor detail vanzelfsprekend zijn.
+              {aboutContent.quote}
             </motion.p>
             
             <motion.p 
               className="mb-8 leading-relaxed text-lg"
               variants={itemVariants}
             >
-              Met meer dan <span className="text-[#B99885] font-semibold">8+ jaren ervaring</span> in de beautybranche combineer ik, <strong className="font-semibold">Marianne</strong>, de nieuwste technieken en <em className="italic text-[#B99885] font-medium">premium producten</em> om behandelingen te creëren die niet alleen zichtbare resultaten leveren, maar ook een moment van rust, ontspanning en pure zelfzorg bieden.
+              {aboutContent.bio1}
             </motion.p>
             
             <motion.p
               className="leading-relaxed text-lg mb-4"
               variants={itemVariants}
             >
-              Ik luister aandachtig naar jouw wensen en behoeften, zodat ik iedere behandeling volledig op jou kan afstemmen. Bij NFB Salon draait het om <span className="text-[#B99885] font-medium">kwaliteit</span>, <span className="text-[#B99885] font-medium">vertrouwen</span> en een <span className="text-[#B99885] font-medium">persoonlijke benadering</span> — elke keer dat jij bij mij langskomt.
+              {aboutContent.bio2}
             </motion.p>
             
-            {/* Signature - optional */}
             <motion.div
               className="mt-6 mb-10"
               variants={itemVariants}
             >
-              <div className="font-serif italic text-[#B99885] text-xl">Marianne</div>
+              <div className="font-serif italic text-[#B99885] text-xl">{aboutContent.ownerName}</div>
               <div className="h-[1px] w-20 bg-[#B99885]/30 mt-2"></div>
             </motion.div>
           </motion.div>
@@ -171,7 +171,7 @@ export function AboutSection() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <span className="text-white font-serif text-xl font-semibold">8+</span>
+                <span className="text-white font-serif text-xl font-semibold">{aboutContent.yearsExperience}</span>
                 <span className="text-xs text-white/90">jaren ervaring</span>
               </motion.div>
             </div>
