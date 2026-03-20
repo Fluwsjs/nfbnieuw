@@ -1,0 +1,13 @@
+UPLOAD YOUR SERVICE IMAGES HERE
+
+For the diensten page to work optimally, please upload the following images to this folder:
+
+1. gezicht.jpg - For facial treatments
+2. waxen.jpg - For eyebrow/waxing treatments
+3. nagels.jpg - For nail treatments
+
+Recommended image size: 800x600px (4:3 aspect ratio)
+Format: JPG or WebP
+Max file size: 300KB for optimal performance
+
+Until you upload these images, the site will use a fallback image. 

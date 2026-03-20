@@ -1,0 +1,14 @@
+BEAUTY SERVICES PLACEHOLDER IMAGES
+
+Voor de diensten sectie zijn de volgende afbeeldingen nodig:
+
+1. facial-treatment.jpg - Een afbeelding van een gezichtsbehandeling
+2. brow-treatment.jpg - Een afbeelding van wenkbrauw/wimper behandelingen
+3. nail-treatment.jpg - Een afbeelding van nagelbehandelingen
+
+Aanbevolen afbeeldingsformaat:
+- Resolutie: 800x600 pixels
+- Bestandsformaat: JPG of WebP
+- Stijl: Professionele, rustige beauty salon afbeeldingen met een warm filter
+
+Tot deze afbeeldingen zijn geüpload, wordt een fallback afbeelding gebruikt. 

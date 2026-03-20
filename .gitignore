@@ -36,6 +36,7 @@ yarn-error.log*
 .env*
 credentials-fixed.json
 google-service-account.json
+src/lib/nfb-service-account.json
 new-google-credentials.txt
 updated-env-credentials.txt
 nfbsalon/

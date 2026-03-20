@@ -1,0 +1,13 @@
+# NFB Salon Robots.txt
+# Versie 1.0
+# www.nfbsalon.nl
+
+User-agent: *
+Allow: /
+
+# Disallow admin section
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://nfbsalon.nl/sitemap.xml 

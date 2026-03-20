@@ -1,0 +1,110 @@
+{
+  "name": "NFB Salon Aerdt",
+  "short_name": "NFB Salon",
+  "description": "Beauty salon in Aerdt voor gezichtsbehandelingen, nagelbehandelingen, en waxen/epileren",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF6F1",
+  "theme_color": "#D8A170",
+  "orientation": "portrait",
+  "dir": "ltr",
+  "lang": "nl-NL",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/homepage.jpg",
+      "sizes": "1280x800",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Homepagina van NFB Salon"
+    },
+    {
+      "src": "/screenshots/services.jpg", 
+      "sizes": "1280x800",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Diensten pagina van NFB Salon"
+    },
+    {
+      "src": "/screenshots/booking.jpg",
+      "sizes": "1280x800",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Afspraak maken bij NFB Salon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Afspraak maken",
+      "short_name": "Afspraak",
+      "description": "Maak direct een afspraak bij NFB Salon",
+      "url": "/afspraak",
+      "icons": [{ "src": "/icons/appointment-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Diensten bekijken",
+      "short_name": "Diensten",
+      "description": "Bekijk alle diensten van NFB Salon",
+      "url": "/diensten",
+      "icons": [{ "src": "/icons/services-icon.png", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["beauty", "lifestyle", "wellness"],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://nfbsalon.nl/manifest.json"
+    }
+  ]
+} 
