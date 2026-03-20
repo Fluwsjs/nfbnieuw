@@ -36,7 +36,8 @@ export const config = {
   },
 };
 
-// Valideer required environment variables in production
+// Warn about missing environment variables (never throw at module load time,
+// as that would crash Edge Function bundling on Netlify).
 if (process.env.NODE_ENV === 'production') {
   const requiredEnvVars = [
     'NEXT_PUBLIC_SITE_URL',
@@ -57,7 +58,7 @@ if (process.env.NODE_ENV === 'production') {
 
   for (const envVar of requiredEnvVars) {
     if (!process.env[envVar]) {
-      throw new Error(`Missing required environment variable: ${envVar}`);
+      console.warn(`[config] Missing environment variable: ${envVar}`);
     }
   }
 } 
