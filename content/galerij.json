@@ -1,0 +1,59 @@
+{
+  "heroSubtitle": "Bekijk de transformaties en resultaten van onze professionele schoonheidsbehandelingen.",
+  "images": [
+    {
+      "id": 1,
+      "category": "Nagelbehandelingen",
+      "description": "Gelnagels met french manicure afwerking",
+      "beforeSrc": "/images/gallery/nails-before-1.jpg",
+      "beforeAlt": "Nagels voor behandeling",
+      "afterSrc": "/images/gallery/nails-after-1.jpg",
+      "afterAlt": "Nagels na behandeling"
+    },
+    {
+      "id": 2,
+      "category": "Nagelbehandelingen",
+      "description": "Acrylnagels met glitter design",
+      "beforeSrc": "/images/gallery/nails-before-2.jpg",
+      "beforeAlt": "Nagels voor behandeling",
+      "afterSrc": "/images/gallery/nails-after-2.jpg",
+      "afterAlt": "Nagels na behandeling"
+    },
+    {
+      "id": 3,
+      "category": "Waxen & Lashlifting",
+      "description": "Lashlifting met wimper tint",
+      "beforeSrc": "/images/gallery/lashes-before-1.jpg",
+      "beforeAlt": "Wimpers voor behandeling",
+      "afterSrc": "/images/gallery/lashes-after-1.jpg",
+      "afterAlt": "Wimpers na behandeling"
+    },
+    {
+      "id": 4,
+      "category": "Waxen & Lashlifting",
+      "description": "Wenkbrauw waxing en styling",
+      "beforeSrc": "/images/gallery/brows-before-1.jpg",
+      "beforeAlt": "Wenkbrauwen voor behandeling",
+      "afterSrc": "/images/gallery/brows-after-1.jpg",
+      "afterAlt": "Wenkbrauwen na behandeling"
+    },
+    {
+      "id": 5,
+      "category": "Gezichtsbehandelingen",
+      "description": "Hydraterende gezichtsbehandeling",
+      "beforeSrc": "/images/gallery/facial-before-1.jpg",
+      "beforeAlt": "Huid voor behandeling",
+      "afterSrc": "/images/gallery/facial-after-1.jpg",
+      "afterAlt": "Huid na behandeling"
+    },
+    {
+      "id": 6,
+      "category": "Gezichtsbehandelingen",
+      "description": "Anti-aging behandeling met LED therapie",
+      "beforeSrc": "/images/gallery/facial-before-2.jpg",
+      "beforeAlt": "Huid voor behandeling",
+      "afterSrc": "/images/gallery/facial-after-2.jpg",
+      "afterAlt": "Huid na behandeling"
+    }
+  ]
+}

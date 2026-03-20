@@ -7,112 +7,18 @@ import { ArrowRight, ChevronDown, ChevronUp, CheckCircle2, Star, CheckCircle } f
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Define service interface for better type safety
-interface ServiceOption {
-  name: string;
-  description?: string;
-  price: string;
-  duration?: string;
-}
+import dienstenData from "../../../content/diensten.json";
 
+// Types
+interface Review { name: string; text: string; stars?: number; }
+interface Treatment { name: string; price: string; duration: string; }
 interface ServiceCategory {
-  id: string;
-  title: string;
-  description: string;
-  icon?: string;
-  image: string;
-  options?: ServiceOption[];
-  benefits?: string[];
-  reviews: Review[];
-  treatments: Treatment[];
+  id: string; title: string; description: string;
+  reviews: Review[]; treatments: Treatment[];
 }
 
-interface Review {
-  name: string;
-  text: string;
-  stars?: number;
-}
-
-interface Treatment {
-  name: string;
-  price: string;
-  duration: string;
-}
-
-// Services data for the redesigned page
-const services = [
-  {
-    id: "gezichtsbehandelingen",
-    title: "Gezichtsbehandelingen",
-    description: "Luxueuze en effectieve behandelingen afgestemd op jouw huidtype en specifieke wensen voor een stralende, gezonde huid.",
-    image: "/images/services/gezicht.jpg", // Path for future image, will use fallback if not available
-    reviews: [
-      { name: "Emma B.", text: "De gezichtsbehandelingen zijn echt verbluffend. Mijn huid straalt na elke behandeling!", stars: 5 }
-    ],
-    treatments: [
-      { name: "Meet & Treat (Kennismakingsbehandeling)", price: "€52", duration: "60 min" },
-      { name: "Pure & Clean (Reinigende behandeling)", price: "€52", duration: "60 min" },
-      { name: "Relax & Nourish (Voedende behandeling)", price: "€69", duration: "75 min" },
-      { name: "Time Reverse (Anti-aging behandeling)", price: "€120", duration: "90 min" }
-    ]
-  },
-  {
-    id: "waxen-epileren",
-    title: "Waxen, Epileren & Verven",
-    description: "Professionele ontharing en wenkbrauwverzorging voor een perfect verzorgde look met langdurig resultaat.",
-    image: "/images/services/waxen.jpg", // Path for future image, will use fallback if not available
-    reviews: [
-      { name: "Thomas K.", text: "Mijn wenkbrauwen zijn perfect in vorm! Ik ben erg tevreden met het resultaat.", stars: 5 }
-    ],
-    treatments: [
-      { name: "Waxen en epileren wenkbrauwen", price: "€17,-", duration: "20 min" },
-      { name: "Waxen en epileren wenkbrauwen incl. verven", price: "€27,-", duration: "30 min" },
-      { name: "Waxen bovenlip", price: "€15,-", duration: "15 min" },
-      { name: "Verven wimpers", price: "€12,50", duration: "20 min" },
-      { name: "Lashlifting", price: "€43,50", duration: "45 min" }
-    ]
-  },
-  {
-    id: "nagelbehandelingen",
-    title: "Nagelbehandelingen",
-    description: "Gezonde, sterke en stijlvolle nagels met langdurige resultaten, uitgevoerd met hoogwaardige producten.",
-    image: "/images/services/nagels.jpg", // Path for future image, will use fallback if not available
-    reviews: [
-      { name: "Julia M.", text: "Mijn nagels zijn nog nooit zo mooi geweest! Prachtige Next Gel behandeling.", stars: 5 }
-    ],
-    treatments: [
-      { name: "Nieuwe set Next Gel", price: "€57,50", duration: "90 min" },
-      { name: "Bijwerken Next Gel", price: "€42,50", duration: "75 min" },
-      { name: "Verwijderen Next Gel", price: "€15", duration: "30 min" },
-      { name: "BIAB op handnagels", price: "€34,50", duration: "60 min" },
-      { name: "Gellak handnagels", price: "€24,50", duration: "45 min" }
-    ]
-  }
-];
-
-// FAQ data
-const faqItems = [
-  {
-    question: "Hoe lang van tevoren moet ik een afspraak maken?",
-    answer: "We raden aan om minimaal een week van tevoren te boeken voor reguliere behandelingen. Voor speciale behandelingen of tijdens drukke periodes zoals feestdagen adviseren we 2-3 weken vooraf te reserveren."
-  },
-  {
-    question: "Kan ik een afspraak annuleren of verzetten?",
-    answer: "Ja, afspraken kunnen tot 24 uur van tevoren kosteloos worden geannuleerd of verzet. Bij annulering binnen 24 uur behouden wij het recht om 50% van de behandelingskosten in rekening te brengen."
-  },
-  {
-    question: "Zijn er specifieke voorbereidingen nodig voor behandelingen?",
-    answer: "Voor de meeste behandelingen is geen specifieke voorbereiding nodig. Voor waxbehandelingen raden we aan dat het haar minimaal 0,5 cm lang is. Voor nagelbehandelingen vragen we om bestaande nagellak vooraf te verwijderen."
-  },
-  {
-    question: "Is er garantie op de nagelbehandelingen?",
-    answer: "Op een behandeling geldt een garantie van een week bij het liften/loslaten van het product. Breuken en scheuren zijn GEEN garantie. De kosten voor een reparatie bedragen €2,50 per nagel."
-  },
-  {
-    question: "Wat als ik allergieën of huidproblemen heb?",
-    answer: "Informeer ons bij het boeken over eventuele allergieën of huidcondities. Onze therapeuten kunnen de behandeling en producten aanpassen aan uw specifieke behoeften. Voor nagelbehandelingen hebben we ook allergieproof opties zoals HEMA/TPO vrije gellak."
-  }
-];
+const services: ServiceCategory[] = dienstenData.services;
+const faqItems = dienstenData.faq;
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -406,8 +312,7 @@ export default function DienstenPage() {
                 custom={1}
                 className="text-xl text-[#1D1D1F]/80 max-w-2xl mx-auto mb-12 leading-relaxed"
               >
-                Ontdek ons uitgebreide aanbod van luxe en professionele behandelingen, 
-                speciaal afgestemd op jouw persoonlijke wensen en behoeften.
+                {dienstenData.heroSubtitle}
               </motion.p>
               
               <motion.div 
@@ -434,7 +339,7 @@ export default function DienstenPage() {
                 <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-md border border-[#CFAF9D]/10 mb-10 max-w-xl">
                   <p className="flex items-start">
                     <CheckCircle size={20} className="text-[#CFAF9D] mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-[#1D1D1F]/80">Alle behandelingen worden uitgevoerd door Marianne, eigenaresse en hoofdbehandelaar met meer dan 8+ jaar ervaring.</span>
+                    <span className="text-[#1D1D1F]/80">{dienstenData.heroBadge}</span>
                   </p>
                 </div>
               </motion.div>
@@ -475,11 +380,10 @@ export default function DienstenPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-[#1D1D1F]">
-              Plan Jouw <span className="text-[#CFAF9D]">Moment</span>
+              {dienstenData.ctaTitle.split(' ').slice(0, -1).join(' ')} <span className="text-[#CFAF9D]">{dienstenData.ctaTitle.split(' ').at(-1)}</span>
             </h2>
             <p className="text-lg text-[#1D1D1F]/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Klaar om jezelf te verwennen met een moment van ontspanning en schoonheid? 
-              Maak vandaag nog een afspraak en ervaar de persoonlijke aandacht van NFB Salon.
+              {dienstenData.ctaSubtitle}
             </p>
             
             <motion.div

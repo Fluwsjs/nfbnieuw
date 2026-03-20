@@ -21,51 +21,14 @@ interface Testimonial {
   imageSrc?: string;
 }
 
-// Testimonials met sterrenratings
-const testimonials: Testimonial[] = [
-  {
-    quote: "Ik kom hier al jaren voor mijn wimpers en ben altijd vol lof over het resultaat. De salon is prachtig ingericht en het team is zeer deskundig.",
-    name: "Emma B.",
-    title: "Vaste klant",
-    rating: 5,
-    imageSrc: "/images/person1.jpeg"
-  },
-  {
-    quote: "Heerlijke gezichtsbehandeling gehad! De producten zijn van topkwaliteit en de aandacht die ik kreeg was geweldig. Mijn huid straalt na elk bezoek.",
-    name: "Thomas K.",
-    title: "Tevreden klant",
-    rating: 5,
-    imageSrc: "/images/person2.jpeg"
-  },
-  {
-    quote: "Wat een fantastische ervaring! De wimperextensions zijn precies wat ik wilde - natuurlijk maar toch vol. Het team is vriendelijk en professioneel.",
-    name: "Sophie L.",
-    title: "Nieuwe klant",
-    rating: 4,
-    imageSrc: "/images/person3.jpeg"
-  },
-  {
-    quote: "De body treatments zijn fantastisch! Zo ontspannend en echt een behandeling van topkwaliteit. Ik kan niet wachten om terug te gaan.",
-    name: "Julia M.",
-    title: "Nieuwe klant",
-    rating: 5,
-    imageSrc: "/images/person4.jpeg"
-  },
-  {
-    quote: "Perfecte manicure! De aandacht voor detail is geweldig en mijn nagels zien er prachtig uit. De sfeer in de salon is ook heerlijk ontspannend.",
-    name: "Linda V.",
-    title: "Regelmatige klant",
-    rating: 5,
-    imageSrc: "/images/person5.jpeg"
-  },
-  {
-    quote: "De gezichtsbehandeling was hemels. Mijn huid voelt zo zacht en gehydrateerd. Alle producten die gebruikt werden waren van hoge kwaliteit.",
-    name: "Mila R.",
-    title: "Vaste klant",
-    rating: 5,
-    imageSrc: "/images/person6.jpeg"
-  },
-];
+import reviewsData from "../../../content/reviews.json";
+
+const testimonials: Testimonial[] = reviewsData.testimonials.map(t => ({
+  quote: t.quote,
+  name: t.name,
+  title: t.title,
+  rating: t.rating,
+}));
 
 export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);

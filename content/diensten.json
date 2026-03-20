@@ -1,0 +1,74 @@
+{
+  "heroSubtitle": "Ontdek ons uitgebreide aanbod van luxe en professionele behandelingen, speciaal afgestemd op jouw persoonlijke wensen en behoeften.",
+  "heroBadge": "Alle behandelingen worden uitgevoerd door Marianne, eigenaresse en hoofdbehandelaar met meer dan 8+ jaar ervaring.",
+  "ctaTitle": "Plan Jouw Moment",
+  "ctaSubtitle": "Klaar om jezelf te verwennen met een moment van ontspanning en schoonheid? Maak vandaag nog een afspraak en ervaar de persoonlijke aandacht van NFB Salon.",
+  "services": [
+    {
+      "id": "gezichtsbehandelingen",
+      "title": "Gezichtsbehandelingen",
+      "description": "Luxueuze en effectieve behandelingen afgestemd op jouw huidtype en specifieke wensen voor een stralende, gezonde huid.",
+      "reviews": [
+        { "name": "Emma B.", "text": "De gezichtsbehandelingen zijn echt verbluffend. Mijn huid straalt na elke behandeling!", "stars": 5 }
+      ],
+      "treatments": [
+        { "name": "Meet & Treat (Kennismakingsbehandeling)", "price": "€52", "duration": "60 min" },
+        { "name": "Pure & Clean (Reinigende behandeling)", "price": "€52", "duration": "60 min" },
+        { "name": "Relax & Nourish (Voedende behandeling)", "price": "€69", "duration": "75 min" },
+        { "name": "Time Reverse (Anti-aging behandeling)", "price": "€120", "duration": "90 min" }
+      ]
+    },
+    {
+      "id": "waxen-epileren",
+      "title": "Waxen, Epileren & Verven",
+      "description": "Professionele ontharing en wenkbrauwverzorging voor een perfect verzorgde look met langdurig resultaat.",
+      "reviews": [
+        { "name": "Thomas K.", "text": "Mijn wenkbrauwen zijn perfect in vorm! Ik ben erg tevreden met het resultaat.", "stars": 5 }
+      ],
+      "treatments": [
+        { "name": "Waxen en epileren wenkbrauwen", "price": "€17,-", "duration": "20 min" },
+        { "name": "Waxen en epileren wenkbrauwen incl. verven", "price": "€27,-", "duration": "30 min" },
+        { "name": "Waxen bovenlip", "price": "€15,-", "duration": "15 min" },
+        { "name": "Verven wimpers", "price": "€12,50", "duration": "20 min" },
+        { "name": "Lashlifting", "price": "€43,50", "duration": "45 min" }
+      ]
+    },
+    {
+      "id": "nagelbehandelingen",
+      "title": "Nagelbehandelingen",
+      "description": "Gezonde, sterke en stijlvolle nagels met langdurige resultaten, uitgevoerd met hoogwaardige producten.",
+      "reviews": [
+        { "name": "Julia M.", "text": "Mijn nagels zijn nog nooit zo mooi geweest! Prachtige Next Gel behandeling.", "stars": 5 }
+      ],
+      "treatments": [
+        { "name": "Nieuwe set Next Gel", "price": "€57,50", "duration": "90 min" },
+        { "name": "Bijwerken Next Gel", "price": "€42,50", "duration": "75 min" },
+        { "name": "Verwijderen Next Gel", "price": "€15", "duration": "30 min" },
+        { "name": "BIAB op handnagels", "price": "€34,50", "duration": "60 min" },
+        { "name": "Gellak handnagels", "price": "€24,50", "duration": "45 min" }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hoe lang van tevoren moet ik een afspraak maken?",
+      "answer": "We raden aan om minimaal een week van tevoren te boeken voor reguliere behandelingen. Voor speciale behandelingen of tijdens drukke periodes zoals feestdagen adviseren we 2-3 weken vooraf te reserveren."
+    },
+    {
+      "question": "Kan ik een afspraak annuleren of verzetten?",
+      "answer": "Ja, afspraken kunnen tot 24 uur van tevoren kosteloos worden geannuleerd of verzet. Bij annulering binnen 24 uur behouden wij het recht om 50% van de behandelingskosten in rekening te brengen."
+    },
+    {
+      "question": "Zijn er specifieke voorbereidingen nodig voor behandelingen?",
+      "answer": "Voor de meeste behandelingen is geen specifieke voorbereiding nodig. Voor waxbehandelingen raden we aan dat het haar minimaal 0,5 cm lang is. Voor nagelbehandelingen vragen we om bestaande nagellak vooraf te verwijderen."
+    },
+    {
+      "question": "Is er garantie op de nagelbehandelingen?",
+      "answer": "Op een behandeling geldt een garantie van een week bij het liften/loslaten van het product. Breuken en scheuren zijn GEEN garantie. De kosten voor een reparatie bedragen €2,50 per nagel."
+    },
+    {
+      "question": "Wat als ik allergieën of huidproblemen heb?",
+      "answer": "Informeer ons bij het boeken over eventuele allergieën of huidcondities. Onze therapeuten kunnen de behandeling en producten aanpassen aan uw specifieke behoeften. Voor nagelbehandelingen hebben we ook allergieproof opties zoals HEMA/TPO vrije gellak."
+    }
+  ]
+}

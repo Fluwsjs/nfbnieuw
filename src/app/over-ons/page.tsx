@@ -5,40 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Award, Heart, Star, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import overOnsData from "../../../content/over-ons.json";
 
-// Define our core values with icons and descriptions
-const coreValues = [
-  {
-    id: 1,
-    name: "Kwaliteit",
-    icon: <Star className="w-8 h-8 text-[#CFAF9D]" />,
-    description: "Ik werk uitsluitend met premium producten en houd mijn vakkennis up-to-date om de hoogste kwaliteit te garanderen."
-  },
-  {
-    id: 2,
-    name: "Comfort",
-    icon: <Heart className="w-8 h-8 text-[#CFAF9D]" />,
-    description: "Een warme, uitnodigende omgeving waar jij je direct op je gemak voelt en volledig kunt ontspannen."
-  },
-  {
-    id: 3,
-    name: "Duurzaamheid",
-    icon: <Shield className="w-8 h-8 text-[#CFAF9D]" />,
-    description: "Waar mogelijk kies ik voor duurzame en milieuvriendelijke producten en werkwijzen."
-  },
-  {
-    id: 4,
-    name: "Precisie",
-    icon: <Clock className="w-8 h-8 text-[#CFAF9D]" />,
-    description: "Elk detail krijgt aandacht, van een perfecte wenkbrauw tot een vlekkeloze nagellak."
-  },
-  {
-    id: 5,
-    name: "Expertise",
-    icon: <Award className="w-8 h-8 text-[#CFAF9D]" />,
-    description: "Jarenlange ervaring en continue bijscholing stellen mij in staat om de nieuwste technieken toe te passen."
-  },
+// Icons matched by position (id 1-5); can't be stored in JSON
+const valueIcons = [
+  <Star  key="1" className="w-8 h-8 text-[#CFAF9D]" />,
+  <Heart key="2" className="w-8 h-8 text-[#CFAF9D]" />,
+  <Shield key="3" className="w-8 h-8 text-[#CFAF9D]" />,
+  <Clock key="4" className="w-8 h-8 text-[#CFAF9D]" />,
+  <Award key="5" className="w-8 h-8 text-[#CFAF9D]" />,
 ];
+
+const coreValues = overOnsData.coreValues.map((v, i) => ({
+  ...v,
+  icon: valueIcons[i] ?? valueIcons[0],
+}));
 
 export default function OverOnsPage() {
   // Animation variants
@@ -89,7 +70,7 @@ export default function OverOnsPage() {
             Over <span className="text-[#CFAF9D]">NFB Salon</span>
           </h1>
           <p className="text-lg md:text-xl text-[#1D1D1F]/80 max-w-2xl mx-auto leading-relaxed">
-            Waar persoonlijke aandacht en kwaliteit samenkomen.
+            {overOnsData.heroSubtitle}
           </p>
         </motion.div>
       </section>
@@ -109,20 +90,11 @@ export default function OverOnsPage() {
               className="flex flex-col gap-6 order-2 md:order-1"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-[#1D1D1F]">
-                Bij <span className="text-[#CFAF9D]">NFB Salon</span> staat luxe en persoonlijke aandacht centraal
+                {overOnsData.introTitle}
               </h2>
-              
-              <p className="text-[#1D1D1F]/80 leading-relaxed text-lg">
-                Mijn missie is om jou een uitzonderlijke ervaring te bieden in een warme, uitnodigende omgeving, waar persoonlijke aandacht, perfectie en oog voor detail vanzelfsprekend zijn.
-              </p>
-              
-              <p className="text-[#1D1D1F]/80 leading-relaxed text-lg">
-                Met meer dan 8+ jaar ervaring in de beautybranche combineer ik, Marianne, de nieuwste technieken en premium producten om behandelingen te creëren die niet alleen zichtbare resultaten leveren, maar ook een moment van rust, ontspanning en pure zelfzorg bieden.
-              </p>
-              
-              <p className="text-[#1D1D1F]/80 leading-relaxed text-lg">
-                Ik luister aandachtig naar jouw wensen en behoeften, zodat ik iedere behandeling volledig op jou kan afstemmen. Bij NFB Salon draait het om kwaliteit, vertrouwen en een persoonlijke benadering — elke keer dat jij bij mij langskomt.
-              </p>
+              <p className="text-[#1D1D1F]/80 leading-relaxed text-lg">{overOnsData.intro1}</p>
+              <p className="text-[#1D1D1F]/80 leading-relaxed text-lg">{overOnsData.intro2}</p>
+              <p className="text-[#1D1D1F]/80 leading-relaxed text-lg">{overOnsData.intro3}</p>
             </motion.div>
 
             <motion.div 
@@ -153,10 +125,10 @@ export default function OverOnsPage() {
             variants={fadeIn}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-[#1D1D1F]">
-              Onze <span className="text-[#CFAF9D]">Waarden</span>
+              {overOnsData.valuesTitle}
             </h2>
             <p className="text-lg text-[#1D1D1F]/80 max-w-2xl mx-auto">
-              Bij NFB Salon zijn dit de principes die centraal staan in alles wat we doen.
+              {overOnsData.valuesSubtitle}
             </p>
           </motion.div>
 
@@ -218,10 +190,10 @@ export default function OverOnsPage() {
           variants={fadeIn}
         >
           <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-[#1D1D1F]">
-            Plan Jouw <span className="text-[#CFAF9D]">Moment</span>
+            {overOnsData.ctaTitle}
           </h2>
           <p className="text-lg text-[#1D1D1F]/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Klaar om jezelf te verwennen met een moment van ontspanning en schoonheid? Maak vandaag nog een afspraak en ervaar de persoonlijke aandacht van NFB Salon.
+            {overOnsData.ctaSubtitle}
           </p>
           
           <motion.div

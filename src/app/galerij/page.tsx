@@ -4,93 +4,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X } from "lucide-react";
+import galerijData from "../../../content/galerij.json";
 
-// Metadata is verwijderd en moet in een apart bestand komen
+const galleryImages = galerijData.images.map(img => ({
+  ...img,
+  before: { src: img.beforeSrc, alt: img.beforeAlt },
+  after:  { src: img.afterSrc,  alt: img.afterAlt  },
+}));
 
-// Gallery images data with before and after
-const galleryImages = [
-  {
-    id: 1,
-    category: "Nagelbehandelingen",
-    before: {
-      src: "/images/gallery/nails-before-1.jpg",
-      alt: "Nagels voor behandeling"
-    },
-    after: {
-      src: "/images/gallery/nails-after-1.jpg",
-      alt: "Nagels na behandeling"
-    },
-    description: "Gelnagels met french manicure afwerking"
-  },
-  {
-    id: 2,
-    category: "Nagelbehandelingen",
-    before: {
-      src: "/images/gallery/nails-before-2.jpg",
-      alt: "Nagels voor behandeling"
-    },
-    after: {
-      src: "/images/gallery/nails-after-2.jpg",
-      alt: "Nagels na behandeling"
-    },
-    description: "Acrylnagels met glitter design"
-  },
-  {
-    id: 3,
-    category: "Waxen & Lashlifting",
-    before: {
-      src: "/images/gallery/lashes-before-1.jpg",
-      alt: "Wimpers voor behandeling"
-    },
-    after: {
-      src: "/images/gallery/lashes-after-1.jpg",
-      alt: "Wimpers na behandeling"
-    },
-    description: "Lashlifting met wimper tint"
-  },
-  {
-    id: 4,
-    category: "Waxen & Lashlifting",
-    before: {
-      src: "/images/gallery/brows-before-1.jpg",
-      alt: "Wenkbrauwen voor behandeling"
-    },
-    after: {
-      src: "/images/gallery/brows-after-1.jpg",
-      alt: "Wenkbrauwen na behandeling"
-    },
-    description: "Wenkbrauw waxing en styling"
-  },
-  {
-    id: 5,
-    category: "Gezichtsbehandelingen",
-    before: {
-      src: "/images/gallery/facial-before-1.jpg",
-      alt: "Huid voor behandeling"
-    },
-    after: {
-      src: "/images/gallery/facial-after-1.jpg",
-      alt: "Huid na behandeling"
-    },
-    description: "Hydraterende gezichtsbehandeling"
-  },
-  {
-    id: 6,
-    category: "Gezichtsbehandelingen",
-    before: {
-      src: "/images/gallery/facial-before-2.jpg",
-      alt: "Huid voor behandeling"
-    },
-    after: {
-      src: "/images/gallery/facial-after-2.jpg",
-      alt: "Huid na behandeling"
-    },
-    description: "Anti-aging behandeling met LED therapie"
-  }
-];
-
-// Filter categories
-const categories = ["Alle", "Nagelbehandelingen", "Waxen & Lashlifting", "Gezichtsbehandelingen"];
+const categories = ["Alle", ...Array.from(new Set(galleryImages.map(img => img.category)))];
 
 export default function GalerijPage() {
   const [selectedImage, setSelectedImage] = useState<null | {src: string, alt: string}>(null);
@@ -154,7 +76,7 @@ export default function GalerijPage() {
             Onze Galerij
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            Bekijk de transformaties en resultaten van onze professionele schoonheidsbehandelingen.
+            {galerijData.heroSubtitle}
           </p>
         </motion.div>
       </section>

@@ -10,16 +10,18 @@ collections:
     label: "Pagina's"
     files:
 
+      # ── HOMEPAGE ──────────────────────────────────────────────────────────
       - label: "Homepage - Hero tekst"
         name: "home"
         file: "content/home.json"
         fields:
-          - { label: "Hoofdtitel (bijv. NFB Salon Aerdt)", name: "heroTitle", widget: "string" }
+          - { label: "Hoofdtitel", name: "heroTitle", widget: "string" }
           - { label: "Welkomsttekst", name: "heroSubtitle", widget: "text" }
           - { label: "Knoptekst afspraak", name: "heroCtaText", widget: "string" }
           - { label: "Knoptekst diensten", name: "heroCtaSecondaryText", widget: "string" }
 
-      - label: "Over ons"
+      # ── OVER ONS (homepagina sectie) ──────────────────────────────────────
+      - label: "Over ons - sectie op homepage"
         name: "about"
         file: "content/about.json"
         fields:
@@ -30,7 +32,8 @@ collections:
           - { label: "Bio alinea 1", name: "bio1", widget: "text" }
           - { label: "Bio alinea 2", name: "bio2", widget: "text" }
 
-      - label: "Diensten"
+      # ── DIENSTEN (homepagina sectie) ──────────────────────────────────────
+      - label: "Diensten - sectie op homepage"
         name: "services"
         file: "content/services.json"
         fields:
@@ -41,12 +44,13 @@ collections:
             fields:
               - { label: "Naam", name: "name", widget: "string" }
               - { label: "Beschrijving", name: "description", widget: "text" }
-              - { label: "Prijs (bijv. vanaf €52)", name: "price", widget: "string" }
+              - { label: "Startprijs (bijv. vanaf €52)", name: "price", widget: "string" }
               - label: "Behandelingen (opsomming)"
                 name: "features"
                 widget: "list"
                 field: { label: "Behandeling", name: "item", widget: "string" }
 
+      # ── CONTACT & OPENINGSTIJDEN ──────────────────────────────────────────
       - label: "Contact & Openingstijden"
         name: "contact"
         file: "content/contact.json"
@@ -62,3 +66,93 @@ collections:
             fields:
               - { label: "Dag", name: "day", widget: "string" }
               - { label: "Tijd (bijv. 09:00 - 18:00 of Gesloten)", name: "time", widget: "string" }
+
+      # ── DIENSTEN PAGINA ────────────────────────────────────────────────────
+      - label: "Diensten pagina (/diensten)"
+        name: "diensten"
+        file: "content/diensten.json"
+        fields:
+          - { label: "Intro tekst", name: "heroSubtitle", widget: "text" }
+          - { label: "Badge tekst (bijv. Alle behandelingen worden...)", name: "heroBadge", widget: "text" }
+          - { label: "CTA knop titel", name: "ctaTitle", widget: "string" }
+          - { label: "CTA knop tekst", name: "ctaSubtitle", widget: "text" }
+          - label: "Diensten & behandelingen"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Naam", name: "title", widget: "string" }
+              - { label: "Beschrijving", name: "description", widget: "text" }
+              - label: "Behandelingen met prijzen"
+                name: "treatments"
+                widget: "list"
+                fields:
+                  - { label: "Naam behandeling", name: "name", widget: "string" }
+                  - { label: "Prijs (bijv. €52)", name: "price", widget: "string" }
+                  - { label: "Duur (bijv. 60 min)", name: "duration", widget: "string" }
+              - label: "Reviews bij deze dienst"
+                name: "reviews"
+                widget: "list"
+                fields:
+                  - { label: "Naam klant", name: "name", widget: "string" }
+                  - { label: "Review tekst", name: "text", widget: "text" }
+                  - { label: "Sterren (1-5)", name: "stars", widget: "number", min: 1, max: 5 }
+          - label: "Veelgestelde vragen (FAQ)"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Vraag", name: "question", widget: "string" }
+              - { label: "Antwoord", name: "answer", widget: "text" }
+
+      # ── OVER ONS PAGINA ────────────────────────────────────────────────────
+      - label: "Over ons pagina (/over-ons)"
+        name: "over-ons"
+        file: "content/over-ons.json"
+        fields:
+          - { label: "Hero ondertitel", name: "heroSubtitle", widget: "string" }
+          - { label: "Intro sectie titel", name: "introTitle", widget: "string" }
+          - { label: "Intro alinea 1", name: "intro1", widget: "text" }
+          - { label: "Intro alinea 2", name: "intro2", widget: "text" }
+          - { label: "Intro alinea 3", name: "intro3", widget: "text" }
+          - { label: "Waarden sectie titel", name: "valuesTitle", widget: "string" }
+          - { label: "Waarden sectie ondertitel", name: "valuesSubtitle", widget: "string" }
+          - label: "Kernwaarden"
+            name: "coreValues"
+            widget: "list"
+            fields:
+              - { label: "Naam", name: "name", widget: "string" }
+              - { label: "Beschrijving", name: "description", widget: "text" }
+          - { label: "CTA titel", name: "ctaTitle", widget: "string" }
+          - { label: "CTA tekst", name: "ctaSubtitle", widget: "text" }
+
+      # ── REVIEWS PAGINA ────────────────────────────────────────────────────
+      - label: "Reviews pagina (/reviews)"
+        name: "reviews"
+        file: "content/reviews.json"
+        fields:
+          - { label: "Hero ondertitel", name: "heroSubtitle", widget: "string" }
+          - label: "Klantreviews"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Naam klant", name: "name", widget: "string" }
+              - { label: "Type klant (bijv. Vaste klant)", name: "title", widget: "string" }
+              - { label: "Review tekst", name: "quote", widget: "text" }
+              - { label: "Sterren (1-5)", name: "rating", widget: "number", min: 1, max: 5 }
+              - { label: "Datum (bijv. 15 februari 2023)", name: "date", widget: "string" }
+
+      # ── GALERIJ PAGINA ────────────────────────────────────────────────────
+      - label: "Galerij pagina (/galerij)"
+        name: "galerij"
+        file: "content/galerij.json"
+        fields:
+          - { label: "Hero ondertitel", name: "heroSubtitle", widget: "string" }
+          - label: "Galerij afbeeldingen (voor & na)"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Categorie", name: "category", widget: "select", options: ["Nagelbehandelingen", "Waxen & Lashlifting", "Gezichtsbehandelingen"] }
+              - { label: "Beschrijving", name: "description", widget: "string" }
+              - { label: "Afbeelding VOOR", name: "beforeSrc", widget: "image" }
+              - { label: "Alt tekst VOOR", name: "beforeAlt", widget: "string" }
+              - { label: "Afbeelding NA", name: "afterSrc", widget: "image" }
+              - { label: "Alt tekst NA", name: "afterAlt", widget: "string" }

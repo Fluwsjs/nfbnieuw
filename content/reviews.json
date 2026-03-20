@@ -1,0 +1,53 @@
+{
+  "heroSubtitle": "Ontdek wat onze klanten zeggen over hun ervaringen bij NFB Salon.",
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Laura Visser",
+      "title": "Vaste klant",
+      "quote": "De nagelbehandelingen bij NFB Salon zijn van uitzonderlijke kwaliteit. Marianne besteedt zoveel aandacht aan detail en zorgt ervoor dat mijn nagels er wekenlang perfect uitzien.",
+      "rating": 5,
+      "date": "15 februari 2023"
+    },
+    {
+      "id": 2,
+      "name": "Marloes de Jong",
+      "title": "Nieuwe klant",
+      "quote": "Ik was onder de indruk van de warme ontvangst en de persoonlijke aandacht tijdens mijn eerste bezoek. De salon is prachtig ingericht en straalt luxe uit.",
+      "rating": 5,
+      "date": "3 maart 2023"
+    },
+    {
+      "id": 3,
+      "name": "Femke Meijer",
+      "title": "Gezichtsbehandeling",
+      "quote": "Mijn huid is compleet getransformeerd met de gepersonaliseerde gezichtsbehandelingen. Mijn huid is nu stralender en gezonder dan ooit.",
+      "rating": 5,
+      "date": "20 april 2023"
+    },
+    {
+      "id": 4,
+      "name": "Anouk Bakker",
+      "title": "Lash Lifting",
+      "quote": "De lash lifting was perfect! Mijn wimpers zien er nu zo natuurlijk vol uit, precies wat ik wilde. Zeer professionele service.",
+      "rating": 5,
+      "date": "12 mei 2023"
+    },
+    {
+      "id": 5,
+      "name": "Esther van Dijk",
+      "title": "Manicure en Pedicure",
+      "quote": "Eindelijk een salon waar zowel manicure als pedicure echt goed worden gedaan. De aandacht voor hygiëne is ook zeer indrukwekkend.",
+      "rating": 5,
+      "date": "8 juni 2023"
+    },
+    {
+      "id": 6,
+      "name": "Iris Smit",
+      "title": "Regelmatige bezoeker",
+      "quote": "Ik kom al jaren bij NFB Salon en de kwaliteit blijft consistent hoog. Marianne is altijd vriendelijk en professioneel. Een echte aanrader!",
+      "rating": 5,
+      "date": "19 juli 2023"
+    }
+  ]
+}

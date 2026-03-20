@@ -1,0 +1,18 @@
+{
+  "heroSubtitle": "Waar persoonlijke aandacht en kwaliteit samenkomen.",
+  "introTitle": "Bij NFB Salon staat luxe en persoonlijke aandacht centraal",
+  "intro1": "Mijn missie is om jou een uitzonderlijke ervaring te bieden in een warme, uitnodigende omgeving, waar persoonlijke aandacht, perfectie en oog voor detail vanzelfsprekend zijn.",
+  "intro2": "Met meer dan 8+ jaar ervaring in de beautybranche combineer ik, Marianne, de nieuwste technieken en premium producten om behandelingen te creëren die niet alleen zichtbare resultaten leveren, maar ook een moment van rust, ontspanning en pure zelfzorg bieden.",
+  "intro3": "Ik luister aandachtig naar jouw wensen en behoeften, zodat ik iedere behandeling volledig op jou kan afstemmen. Bij NFB Salon draait het om kwaliteit, vertrouwen en een persoonlijke benadering — elke keer dat jij bij mij langskomt.",
+  "valuesTitle": "Onze Waarden",
+  "valuesSubtitle": "Bij NFB Salon zijn dit de principes die centraal staan in alles wat we doen.",
+  "coreValues": [
+    { "id": 1, "name": "Kwaliteit",    "description": "Ik werk uitsluitend met premium producten en houd mijn vakkennis up-to-date om de hoogste kwaliteit te garanderen." },
+    { "id": 2, "name": "Comfort",      "description": "Een warme, uitnodigende omgeving waar jij je direct op je gemak voelt en volledig kunt ontspannen." },
+    { "id": 3, "name": "Duurzaamheid", "description": "Waar mogelijk kies ik voor duurzame en milieuvriendelijke producten en werkwijzen." },
+    { "id": 4, "name": "Precisie",     "description": "Elk detail krijgt aandacht, van een perfecte wenkbrauw tot een vlekkeloze nagellak." },
+    { "id": 5, "name": "Expertise",    "description": "Jarenlange ervaring en continue bijscholing stellen mij in staat om de nieuwste technieken toe te passen." }
+  ],
+  "ctaTitle": "Plan Jouw Moment",
+  "ctaSubtitle": "Klaar om jezelf te verwennen met een moment van ontspanning en schoonheid? Maak vandaag nog een afspraak en ervaar de persoonlijke aandacht van NFB Salon."
+}

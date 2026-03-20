@@ -28,57 +28,9 @@ interface FormData {
   review: string;
 }
 
-// Sample testimonials data
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Laura Visser",
-    title: "Vaste klant",
-    quote: "De nagelbehandelingen bij NFB Salon zijn van uitzonderlijke kwaliteit. Emma besteedt zoveel aandacht aan detail en zorgt ervoor dat mijn nagels er wekenlang perfect uitzien.",
-    rating: 5,
-    date: "15 februari 2023"
-  },
-  {
-    id: 2,
-    name: "Marloes de Jong",
-    title: "Nieuwe klant",
-    quote: "Ik was onder de indruk van de warme ontvangst en de persoonlijke aandacht tijdens mijn eerste bezoek. De salon is prachtig ingericht en straalt luxe uit.",
-    rating: 5,
-    date: "3 maart 2023"
-  },
-  {
-    id: 3,
-    name: "Femke Meijer",
-    title: "Gezichtsbehandeling",
-    quote: "Lisa heeft mijn huid compleet getransformeerd met haar gepersonaliseerde gezichtsbehandelingen. Mijn huid is nu stralender en gezonder dan ooit.",
-    rating: 5,
-    date: "20 april 2023"
-  },
-  {
-    id: 4,
-    name: "Anouk Bakker",
-    title: "Lash Lifting",
-    quote: "De lash lifting bij Sophie was perfect! Mijn wimpers zien er nu zo natuurlijk vol uit, precies wat ik wilde. Zeer professionele service.",
-    rating: 4.5,
-    date: "12 mei 2023"
-  },
-  {
-    id: 5,
-    name: "Esther van Dijk",
-    title: "Manicure en Pedicure",
-    quote: "Eindelijk een salon waar zowel manicure als pedicure echt goed worden gedaan. De aandacht voor hygiëne is ook zeer indrukwekkend.",
-    rating: 5,
-    date: "8 juni 2023"
-  },
-  {
-    id: 6,
-    name: "Iris Smit",
-    title: "Regelmatige bezoeker",
-    quote: "Ik kom al jaren bij NFB Salon en de kwaliteit blijft consistent hoog. Het team is altijd vriendelijk en professioneel. Een echte aanrader!",
-    rating: 5,
-    date: "19 juli 2023"
-  },
-];
+import reviewsData from "../../../content/reviews.json";
+
+const testimonials: Testimonial[] = reviewsData.testimonials;
 
 export default function ReviewsPage() {
   const [formData, setFormData] = useState<FormData>({
@@ -171,7 +123,7 @@ export default function ReviewsPage() {
             Onze Reviews
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            Ontdek wat onze klanten zeggen over hun ervaringen bij NFB Salon.
+            {reviewsData.heroSubtitle}
           </p>
         </motion.div>
       </section>
